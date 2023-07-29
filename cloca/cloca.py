@@ -4,7 +4,7 @@ class Cloca:
 
     Attributes
     ----------
-    current_time : int
+    _current_time : int
         The current time value.
 
     Methods
@@ -14,6 +14,9 @@ class Cloca:
 
     now()
         Get the current time value.
+
+    delayed(delay)
+        Get the current time value plus the specified delay.
 
     reset()
         Reset the current time to 0.
@@ -33,8 +36,25 @@ class Cloca:
         """
         if cls._instance is None:
             cls._instance = super().__new__(cls)
-            cls._instance.current_time = 0
+            cls._instance._current_time = 0
         return cls._instance
+
+    def delayed(self, delay):
+        """
+        Get the current time value plus the specified delay.
+
+        Parameters
+        ----------
+        delay : int
+            The delay to be added to the current time.
+
+        Returns
+        -------
+        int
+            The current time value plus the specified delay.
+
+        """
+        return self.now() + delay
 
     def increase(self, increment=1):
         """
@@ -46,7 +66,7 @@ class Cloca:
             The value by which to increase the current time. Default is 1.
 
         """
-        self.current_time += increment
+        self._current_time += increment
 
     def now(self):
         """
@@ -58,12 +78,11 @@ class Cloca:
             The current time value.
 
         """
-        return self.current_time
+        return self._current_time
 
     def reset(self):
         """
         Reset the current time to 0.
 
         """
-        self.current_time = 0
-
+        self._current_time = 0

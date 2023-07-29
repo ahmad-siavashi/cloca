@@ -8,6 +8,7 @@ cloca is a simple Python library that provides a global clock with functionaliti
 
 - Global clock with manual time incrementation.
 - Read the current time from anywhere in your Python project.
+- Obtain future time after a specified delay.
 - Reset the clock to zero as needed.
 
 ### Installation
