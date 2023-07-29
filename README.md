@@ -93,8 +93,3 @@ If you encounter any problems or have questions, please feel free to open an iss
 ### Acknowledgments
 
 This project was inspired by the need for a simple global clock for Python projects.
-
-
----
-
-Thank you for using cloca! We hope this library simplifies time management in your Python projects. If you have any feedback or suggestions, please let us know. Happy coding!
